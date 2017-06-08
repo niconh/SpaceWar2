@@ -50,7 +50,7 @@ public class Lava extends Planeta {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return " El planeta " + this.nombre + " es de lava"
-				+ " con " + this.poblacion + " habitantes.\n"
+				+ " con una población de " + this.poblacion + " habitantes.\n"
 				+ "  Posee " + this.cantidadTorretas + " de torreta/s de defensa.";
 	}
 

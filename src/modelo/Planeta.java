@@ -107,6 +107,15 @@ public abstract class Planeta extends ElementoDeJuego {
 		this.aumentandoLaProduccion = true;
 	}
 
+	public void pararProduccion() {
+		this.produciendoTorretas = false;
+		this.produciendoNaveDeBatalla = false;
+		this.produciendoNaveDestructor  = false;
+		this.produciendoNaveDeTransporte = false;
+		this.aumentandoLaProduccion = false;
+		
+	}
+
 
 
 }

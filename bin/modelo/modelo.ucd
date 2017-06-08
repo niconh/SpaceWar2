@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1105,1096" id="modelo" metadata="uml2-1.0" initialized="true" scrolledY="6" tag="10" key="32303037303533312D313020537061636557617232">
+  <children xsi:type="editmodel:ClassEditModel" name="Jugador" location="238,217" size="153,211" id="modelo/Jugador" runTimeClassModel="nombre,Jugador(Ljava.lang.String;),toString(),getNombre(),avanzarTurno(),planetas,getPlanetas(),setNombre(Ljava.lang.String;),agregarPlaneta(Lmodelo.Planeta;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="nombre" id="modelo/Jugador#nombre"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="planetas" id="modelo/Jugador#planetas"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="103,126">
+      <children xsi:type="editmodel:MethodEditModel" name="Jugador" id="modelo/Jugador#Jugador(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="agregarPlaneta" id="modelo/Jugador#agregarPlaneta(Lmodelo.Planeta;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Jugador#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNombre" id="modelo/Jugador#getNombre()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPlanetas" id="modelo/Jugador#getPlanetas()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setNombre" id="modelo/Jugador#setNombre(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="modelo/Jugador#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="observer/Observado&lt;-modelo/Jugador" source="//@children.0" target="//@children.11/@sourceConnections.0" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Lava" location="803,793" size="121,103" id="modelo/Lava" runTimeClassModel="Lava(Ljava.lang.String;),toString(),avanzarTurno()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="98,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Lava" id="modelo/Lava#Lava(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Lava#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="modelo/Lava#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="modelo/Planeta&lt;-modelo/Lava" source="//@children.1" target="//@children.6/@sourceConnections.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.11/@sourceConnections.0" name="Observado" location="136,50" size="170,117" id="observer/Observado" runTimeClassModel="registrarObservador(Lobserver.IObservador;),actualizarObservadores(),quitarObservador(Lobserver.IObservador;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="147,54">
+      <children xsi:type="editmodel:MethodEditModel" name="actualizarObservadores" id="observer/Observado#actualizarObservadores()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="quitarObservador" id="observer/Observado#quitarObservador(Lobserver.IObservador;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="registrarObservador" id="observer/Observado#registrarObservador(Lobserver.IObservador;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.9/@sourceConnections.0" name="Nave" location="50,460" size="113,85" id="modelo/Nave" runTimeClassModel="setDireccion(II),Nave()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Nave" id="modelo/Nave#Nave()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDireccion" id="modelo/Nave#setDireccion(II)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.10/@sourceConnections.0 //@children.5/@sourceConnections.0" autoLocated="true" id="modelo/ElementoDeJuego&lt;-modelo/Nave" source="//@children.3" target="//@children.11" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,67" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Transporte" location="424,793" size="198,283" id="modelo/Transporte" runTimeClassModel="setDirX(I),toString(),getPosY(),Transporte(II),setDirY(I),getDirX(),capacidadMaxDePersonas,dirX,getPosX(),dirY,getDirY(),avanzarTurno(),getCapacidadMaxDePersonas()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="165,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="capacidadMaxDePersonas" id="modelo/Transporte#capacidadMaxDePersonas"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dirX" id="modelo/Transporte#dirX"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dirY" id="modelo/Transporte#dirY"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="175,180">
+      <children xsi:type="editmodel:MethodEditModel" name="Transporte" id="modelo/Transporte#Transporte(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Transporte#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCapacidadMaxDePersonas" id="modelo/Transporte#getCapacidadMaxDePersonas()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDirX" id="modelo/Transporte#getDirX()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDirY" id="modelo/Transporte#getDirY()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPosX" id="modelo/Transporte#getPosX()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPosY" id="modelo/Transporte#getPosY()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDirX" id="modelo/Transporte#setDirX(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDirY" id="modelo/Transporte#setDirY(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="modelo/Transporte#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="modelo/Nave&lt;-modelo/Transporte" source="//@children.4" target="//@children.9/@sourceConnections.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="99,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Universo" location="193,460" size="211,157" id="modelo/Universo" runTimeClassModel="getJugadores(),jugadores,avanzarTurno(),Universo(),getElementos(),elementos">
+    <children xsi:type="editmodel:CompartmentEditModel" size="188,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="elementos" id="modelo/Universo#planetas"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="jugadores" id="modelo/Universo#jugadores"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="98,72">
+      <children xsi:type="editmodel:MethodEditModel" name="Universo" id="modelo/Universo#Universo()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Universo#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getElementos" id="modelo/Universo#getElementos()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getJugadores" id="modelo/Universo#getJugadores()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="modelo/ElementoDeJuego&lt;-modelo/Universo" source="//@children.5" target="//@children.3/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Congelado" location="652,793" size="121,103" id="modelo/Congelado" runTimeClassModel="toString(),avanzarTurno(),Congelado(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="98,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Congelado" id="modelo/Congelado#Congelado(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Congelado#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="modelo/Congelado#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.7/@sourceConnections.0" autoLocated="true" id="modelo/Planeta&lt;-modelo/Congelado" source="//@children.6" target="//@children.10" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="92,318" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Terrestre" location="954,793" size="121,103" id="modelo/Terrestre" runTimeClassModel="toString(),Terrestre(Ljava.lang.String;),avanzarTurno()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="98,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Terrestre" id="modelo/Terrestre#Terrestre(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Terrestre#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="modelo/Terrestre#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="modelo/Planeta&lt;-modelo/Terrestre" source="//@children.7" target="//@children.6/@sourceConnections.0" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Destructor" location="237,793" size="157,283" id="modelo/Destructor" runTimeClassModel="setDirX(I),toString(),getPosY(),setDirY(I),getDirX(),dirX,getPosX(),dirY,getDirY(),avanzarTurno(),getPotenciaDeAtaque(),potenciaDeAtaque,Destructor(II)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="125,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="dirX" id="modelo/Destructor#dirX"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dirY" id="modelo/Destructor#dirY"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="potenciaDeAtaque" id="modelo/Destructor#potenciaDeAtaque"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="134,180">
+      <children xsi:type="editmodel:MethodEditModel" name="Destructor" id="modelo/Destructor#Destructor(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Destructor#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDirX" id="modelo/Destructor#getDirX()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDirY" id="modelo/Destructor#getDirY()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPosX" id="modelo/Destructor#getPosX()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPosY" id="modelo/Destructor#getPosY()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPotenciaDeAtaque" id="modelo/Destructor#getPotenciaDeAtaque()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDirX" id="modelo/Destructor#setDirX(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDirY" id="modelo/Destructor#setDirY(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="modelo/Destructor#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="modelo/Nave&lt;-modelo/Destructor" source="//@children.8" target="//@children.9/@sourceConnections.0" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Batalla" location="50,793" size="157,175" id="modelo/Batalla" runTimeClassModel="toString(),getPosY(),avanzarTurno(),getPotenciaDeAtaque(),Batalla(II),getPosX(),potenciaDeAtaque">
+    <children xsi:type="editmodel:CompartmentEditModel" size="125,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="potenciaDeAtaque" id="modelo/Batalla#potenciaDeAtaque"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="134,108">
+      <children xsi:type="editmodel:MethodEditModel" name="Batalla" id="modelo/Batalla#Batalla(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Batalla#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPosX" id="modelo/Batalla#getPosX()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPosY" id="modelo/Batalla#getPosY()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPotenciaDeAtaque" id="modelo/Batalla#getPotenciaDeAtaque()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="modelo/Batalla#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.8/@sourceConnections.0 //@children.4/@sourceConnections.0" autoLocated="true" id="modelo/Nave&lt;-modelo/Batalla" source="//@children.9" target="//@children.3" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,85" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.0" name="Planeta" location="771,460" size="184,319" id="modelo/Planeta" runTimeClassModel="getNaves(),producirNaveDeBatalla(),cantidadTorretas,getCantidadPlanetas(),naves,aumentarLaProduccion(),Planeta(Ljava.lang.String;III),getNombre(),getCantidadTorretas(),avanzarTurno(),producirTorretas(),producirNaveDeTransporte(),getPoblacion(),producirNaveDestructor(),agregarNave(Lmodelo.Nave;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="117,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="naves" id="modelo/Planeta#naves"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cantidadTorretas" id="modelo/Planeta#cantidadTorretas"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="161,234">
+      <children xsi:type="editmodel:MethodEditModel" name="Planeta" id="modelo/Planeta#Planeta(Ljava.lang.String;III)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="agregarNave" id="modelo/Planeta#agregarNave(Lmodelo.Nave;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="aumentarLaProduccion" id="modelo/Planeta#aumentarLaProduccion()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/Planeta#avanzarTurno()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCantidadPlanetas" id="modelo/Planeta#getCantidadPlanetas()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNaves" id="modelo/Planeta#getNaves()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNombre" id="modelo/Planeta#getNombre()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPoblacion" id="modelo/Planeta#getPoblacion()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="producirNaveDeBatalla" id="modelo/Planeta#producirNaveDeBatalla()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="producirNaveDeTransporte" id="modelo/Planeta#producirNaveDeTransporte()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="producirNaveDestructor" id="modelo/Planeta#producirNaveDestructor()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="producirTorretas" id="modelo/Planeta#producirTorretas()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCantidadTorretas" id="modelo/Planeta#getCantidadTorretas()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="modelo/ElementoDeJuego&lt;-modelo/Planeta" source="//@children.10" target="//@children.3/@sourceConnections.0" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="92,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0" name="ElementoDeJuego" location="50,217" size="158,67" id="modelo/ElementoDeJuego" runTimeClassModel="avanzarTurno()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="98,18">
+      <children xsi:type="editmodel:MethodEditModel" name="avanzarTurno" id="modelo/ElementoDeJuego#avanzarTurno()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.0/@sourceConnections.0" autoLocated="true" id="observer/Observado&lt;-modelo/ElementoDeJuego" source="//@children.11" target="//@children.2" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="85,117" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

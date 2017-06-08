@@ -30,10 +30,18 @@ public class ControladorTurno {
 					VistaAccionesPlaneta vistaAccionesPlaneta = new VistaAccionesPlaneta(j.getNombre(),p.getNombre());
 			        		
 			        vistaAccionesPlaneta.setVisible(true);
-			        	 
-			        while(!vistaAccionesPlaneta.isAvanzarTurno()){
-			        	// Esperando que se aprete el boton Avanzar Turno
+			        
+			        //p.pararProduccion();
+			        
+			        
+			        try{
+			        	while(!vistaAccionesPlaneta.isAvanzarTurno()){
+			        		Thread.sleep(100);
+			        	}
+			        }catch (Exception e){
+			        	
 			        }
+			        
 					
 		
 					 if(vistaAccionesPlaneta.isProduciendoTorretas())
