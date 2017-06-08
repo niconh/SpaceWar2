@@ -17,9 +17,7 @@ public class Programa {
 		
 		controlador.ejecutar();
 		
-//		new VistaAccionesPlaneta("test");
-
-		
+	
 	}
 
 }
