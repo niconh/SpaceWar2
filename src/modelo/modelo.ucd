@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1105,1096" id="modelo" metadata="uml2-1.0" initialized="true" scrolledY="6" tag="10" key="32303037303533312D313020537061636557617232">
-  <children xsi:type="editmodel:ClassEditModel" name="Jugador" location="238,217" size="153,211" id="modelo/Jugador" runTimeClassModel="nombre,toString(),Jugador(Ljava.lang.String;),getNombre(),avanzarTurno(),getPlanetas(),planetas,setNombre(Ljava.lang.String;),agregarPlaneta(Lmodelo.Planeta;)">
+  <children xsi:type="editmodel:ClassEditModel" name="Jugador" location="238,217" size="153,211" id="modelo/Jugador" runTimeClassModel="nombre,Jugador(Ljava.lang.String;),toString(),getNombre(),avanzarTurno(),planetas,getPlanetas(),setNombre(Ljava.lang.String;),agregarPlaneta(Lmodelo.Planeta;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="130,36">
       <children xsi:type="editmodel:AttributeEditModel" name="nombre" id="modelo/Jugador#nombre"/>
       <children xsi:type="editmodel:AttributeEditModel" name="planetas" id="modelo/Jugador#planetas"/>
@@ -83,9 +83,9 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Universo" location="193,460" size="211,157" id="modelo/Universo" runTimeClassModel="getJugadores(),avanzarTurno(),jugadores,Universo(),getElementos(),elementos">
+  <children xsi:type="editmodel:ClassEditModel" name="Universo" location="193,460" size="211,157" id="modelo/Universo" runTimeClassModel="getJugadores(),jugadores,avanzarTurno(),Universo(),getElementos(),elementos">
     <children xsi:type="editmodel:CompartmentEditModel" size="188,36">
-      <children xsi:type="editmodel:AttributeEditModel" name="elementos" id="modelo/Universo#elementos"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="elementos" id="modelo/Universo#planetas"/>
       <children xsi:type="editmodel:AttributeEditModel" name="jugadores" id="modelo/Universo#jugadores"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="98,72">
@@ -154,7 +154,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Batalla" location="50,793" size="157,175" id="modelo/Batalla" runTimeClassModel="getPosY(),toString(),avanzarTurno(),getPotenciaDeAtaque(),getPosX(),Batalla(II),potenciaDeAtaque">
+  <children xsi:type="editmodel:ClassEditModel" name="Batalla" location="50,793" size="157,175" id="modelo/Batalla" runTimeClassModel="toString(),getPosY(),avanzarTurno(),getPotenciaDeAtaque(),Batalla(II),getPosX(),potenciaDeAtaque">
     <children xsi:type="editmodel:CompartmentEditModel" size="125,18">
       <children xsi:type="editmodel:AttributeEditModel" name="potenciaDeAtaque" id="modelo/Batalla#potenciaDeAtaque"/>
     </children>
@@ -173,7 +173,7 @@
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.0" name="Planeta" location="771,460" size="184,319" id="modelo/Planeta" runTimeClassModel="getNaves(),producirNaveDeBatalla(),cantidadTorretas,getCantidadPlanetas(),naves,aumentarLaProduccion(),Planeta(Ljava.lang.String;III),getNombre(),getCantidadTorretas(),avanzarTurno(),producirTorretas(),producirNaveDeTransporte(),getPoblacion(),agregarNave(Lmodelo.Nave;),producirNaveDestructor()">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.0" name="Planeta" location="771,460" size="184,319" id="modelo/Planeta" runTimeClassModel="getNaves(),producirNaveDeBatalla(),cantidadTorretas,getCantidadPlanetas(),naves,aumentarLaProduccion(),Planeta(Ljava.lang.String;III),getNombre(),getCantidadTorretas(),avanzarTurno(),producirTorretas(),producirNaveDeTransporte(),getPoblacion(),producirNaveDestructor(),agregarNave(Lmodelo.Nave;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="117,36">
       <children xsi:type="editmodel:AttributeEditModel" name="naves" id="modelo/Planeta#naves"/>
       <children xsi:type="editmodel:AttributeEditModel" name="cantidadTorretas" id="modelo/Planeta#cantidadTorretas"/>

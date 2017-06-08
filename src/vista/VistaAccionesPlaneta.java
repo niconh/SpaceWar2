@@ -9,6 +9,7 @@ public class VistaAccionesPlaneta extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
 	protected JLabel accion = null;
+
 	private JButton botonTorretas,
 					botonNaveBatalla,
 					botonNaveDestructor,
@@ -16,18 +17,17 @@ public class VistaAccionesPlaneta extends JFrame implements ActionListener {
 					botonAumentandoProduccion,
 					botonAvanzarTurno;
 	
-	protected boolean avanzarTurno;
-	
-	protected boolean produciendoTorretas;
-	protected boolean produciendoNaveDeBatalla;
-	protected boolean produciendoNaveDestructor;
-	protected boolean produciendoNaveDeTransporte;
-	protected boolean aumentandoLaProduccion;
+	protected boolean produciendoTorretas,
+	 				  produciendoNaveDeBatalla,
+	 				  produciendoNaveDestructor,
+	 				  produciendoNaveDeTransporte,
+	 				  aumentandoLaProduccion,
+	 				  avanzarTurno;
 	
 	public VistaAccionesPlaneta(String nombreJugador, String nombrePlaneta){
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         this.setTitle("Jugador: "+ nombreJugador + " - Planeta: " + nombrePlaneta);
-    	this.setSize(350,500);
+    	this.setSize(400,450);
     	this.setLocation(0, 0);
     
     	GridLayout layout = new GridLayout(10,0);

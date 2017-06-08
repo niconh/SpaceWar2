@@ -6,15 +6,15 @@ public abstract class Planeta extends ElementoDeJuego {
 
 	
 	
-	protected int cantidadTorretas;
-	protected boolean produciendoTorretas;
+	protected int cantidadTorretas,
+				  cantidadDeTurnosParaProducir;
 	
-	protected int cantidadDeTurnosParaProducir;
-	protected boolean aumentandoLaProduccion;
+	protected boolean produciendoTorretas,	
+	                  produciendoNaveDeBatalla,
+	                  produciendoNaveDestructor,
+	                  produciendoNaveDeTransporte,
+	                  aumentandoLaProduccion;
 	
-	protected boolean produciendoNaveDeBatalla;
-	protected boolean produciendoNaveDestructor;
-	protected boolean produciendoNaveDeTransporte;
 	protected List<Nave> naves = new ArrayList<Nave>();
 	
 	public void agregarNave(Nave nave){

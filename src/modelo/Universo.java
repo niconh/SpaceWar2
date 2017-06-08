@@ -10,19 +10,18 @@ public class Universo extends ElementoDeJuego {
 		return this.jugadores;
 	}
 	
-	private List<ElementoDeJuego> elementos = new ArrayList<ElementoDeJuego>();
-	
-	public List<ElementoDeJuego> getElementos(){
-		return this.elementos;
-	}
+	private List<Planeta> planetas = new ArrayList<Planeta>();
 	
 
+	public List<Planeta> getPlanetas(){
+		return this.planetas;
+	}
 	
 	public void avanzarTurno(){
 		super.avanzarTurno();
 		//Avanzo el turno de todos los elementos del juego
-		for(ElementoDeJuego e : this.elementos){
-			e.avanzarTurno();
+		for(Planeta p : this.planetas){
+			p.avanzarTurno();
 		}
 		
 		for(Jugador j : this.jugadores){
@@ -45,13 +44,18 @@ public class Universo extends ElementoDeJuego {
 		Planeta venus = new Lava("Venus");
 		Planeta pluton = new Congelado("Pluton");
 		Planeta neptuno = new Congelado("Neptuno");
+		Planeta melmak = new Congelado("Melmak");
+		Planeta krypton = new Lava("Krypton");
 		
 		player1.agregarPlaneta(tierra);	
-		player2.agregarPlaneta(venus);
+		player1.agregarPlaneta(krypton);
 		
-		this.elementos.add(marte);
-		this.elementos.add(pluton);
-		this.elementos.add(neptuno);
+		player2.agregarPlaneta(venus);
+		player2.agregarPlaneta(melmak);
+		
+		this.planetas.add(marte);
+		this.planetas.add(pluton);
+		this.planetas.add(neptuno);
 
 	}
 

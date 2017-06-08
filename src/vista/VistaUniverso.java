@@ -12,13 +12,12 @@ public class VistaUniverso implements IObservador {
 	}
 
 	public void Actualizar() {
-		System.out.println("            Universo");
-		System.out.println("*********************************");
-		
-		
-		
-		for(ElementoDeJuego e: this.universo.getElementos()){
-			System.out.println(e.toString());
+		System.out.println("**************************************");
+		System.out.println(" El universo tiene " + Planeta.getCantidadPlanetas() + " planetas.");
+		System.out.println("**************************************");
+	
+		for(Planeta p: this.universo.getPlanetas()){
+			System.out.println(p.toString());
 		}
 		
 		for (Jugador j: this.universo.getJugadores()){
@@ -31,7 +30,7 @@ public class VistaUniverso implements IObservador {
 			}
 		}
 		
-		System.out.println("*********************************");
+		
 		
 	}
 
