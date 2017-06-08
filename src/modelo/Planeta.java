@@ -25,7 +25,6 @@ public abstract class Planeta extends ElementoDeJuego {
 		return this.naves;
 	}
 	
-
 	//Jugamos con lo estatico
 	private static int cantidadPlanetas = 0;
 	
@@ -33,15 +32,17 @@ public abstract class Planeta extends ElementoDeJuego {
 		//Aca no existe el this
 		return Planeta.cantidadPlanetas;		
 	}
+
 	
 	public void avanzarTurno(){
 		super.avanzarTurno();
-		
-		
-		
 	}
 	
 	
+	public int getCantidadTorretas() {
+		return cantidadTorretas;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -105,7 +106,7 @@ public abstract class Planeta extends ElementoDeJuego {
 		this.produciendoNaveDeTransporte = false;
 		this.aumentandoLaProduccion = true;
 	}
-	
+
 
 
 }

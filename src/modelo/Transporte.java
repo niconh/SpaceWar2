@@ -51,8 +51,8 @@ public class Transporte extends Nave {
 	}
 
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "   Soy una nave de transporte que transita el espacio en "
+
+		return "  Soy una nave de transporte que transita el espacio en "
 				+ this.posX + " " + this.posY + ".";
 	}
 

@@ -30,8 +30,8 @@ public class Batalla extends Nave {
 
 	
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "   Soy una nave de batalla que transita el espacio en "
+
+		return "  Soy una nave de batalla que transita el espacio en "
 				+ this.posX + " " + this.posY + ".";
 	}
 

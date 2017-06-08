@@ -12,22 +12,22 @@ public class VistaUniverso implements IObservador {
 	}
 
 	public void Actualizar() {
+		System.out.println("            Universo");
 		System.out.println("*********************************");
-		System.out.println("              Universo");
-		System.out.println("*********************************");
+		
+		
 		
 		for(ElementoDeJuego e: this.universo.getElementos()){
 			System.out.println(e.toString());
 		}
 		
 		for (Jugador j: this.universo.getJugadores()){
-			System.out.println("El jugador " + j.getNombre() + " es dueño de:");
+			System.out.println(j.toString());
 			for(Planeta p: j.getPlanetas()){
 				System.out.println(p.toString());
 				for(Nave n: p.getNaves()){
 					System.out.println(n.toString());
-				}
-				
+				}	
 			}
 		}
 		

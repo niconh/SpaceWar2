@@ -11,14 +11,15 @@ public class Programa {
 		
 		VistaUniverso vista = new VistaUniverso(universo);
 		
-		ControladorTurno controlador = new ControladorTurno(10, universo);
+		ControladorTurno controlador = new ControladorTurno(50, universo);
 		
 		universo.registrarObservador(vista);
 		
 		controlador.ejecutar();
 		
-		
+//		new VistaAccionesPlaneta("test");
 
+		
 	}
 
 }

@@ -16,6 +16,8 @@ public class Universo extends ElementoDeJuego {
 		return this.elementos;
 	}
 	
+
+	
 	public void avanzarTurno(){
 		super.avanzarTurno();
 		//Avanzo el turno de todos los elementos del juego
@@ -33,19 +35,23 @@ public class Universo extends ElementoDeJuego {
 	public Universo(){
 		
 		Jugador player1 = new Jugador("Nico");
+		Jugador player2 = new Jugador("Nacho");
 		
 		jugadores.add(player1);
+		jugadores.add(player2);
 		
 		Planeta tierra = new Terrestre("Tierra");
 		Planeta marte = new Lava("Marte");
 		Planeta venus = new Lava("Venus");
 		Planeta pluton = new Congelado("Pluton");
+		Planeta neptuno = new Congelado("Neptuno");
 		
 		player1.agregarPlaneta(tierra);	
+		player2.agregarPlaneta(venus);
 		
-		this.elementos.add(venus);
 		this.elementos.add(marte);
 		this.elementos.add(pluton);
+		this.elementos.add(neptuno);
 
 	}
 
