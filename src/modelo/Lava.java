@@ -49,8 +49,8 @@ public class Lava extends Planeta {
 
 	public String toString() {
 		// TODO Auto-generated method stub
-		return " El planeta " + this.nombre + " es de lava"
-				+ " con una población de " + this.poblacion + " habitantes.\n"
+		return " El planeta " + this.nombre + " esta cubierto de rios de lava pero tiene"
+				+ " una población de " + this.poblacion + " habitantes.\n"
 				+ "  Posee " + this.cantidadTorretas + " de torreta/s de defensa.";
 	}
 

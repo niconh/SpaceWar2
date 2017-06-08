@@ -5,7 +5,7 @@ public class Congelado extends Planeta{
 	private int poblacion_maxima = 9999;
 	
 	public Congelado(String nombre) {
-		super(nombre,1,4,7);
+		super(nombre,3,4,7);
 	}
 
 	public void avanzarTurno(){
@@ -50,7 +50,7 @@ public class Congelado extends Planeta{
 	public String toString() {
 		// TODO Auto-generated method stub
 		return " El planeta " + this.nombre + " esta en gran parte congelado"
-				+ " y tiene una poblacion de " + this.poblacion + " habitantes.\n"
+				+ " pero tiene una poblacion de " + this.poblacion + " habitantes.\n"
 				+ "  Posee " + this.cantidadTorretas + " de torreta/s de defensa.";
 		
 	}

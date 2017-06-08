@@ -51,7 +51,7 @@ public class Terrestre extends Planeta {
 	public String toString() {
 
 		return " El planeta " + this.nombre
-				+ " con una población de " + this.poblacion + " habitantes.\n"
+				+ " tiene una población de " + this.poblacion + " habitantes.\n"
 				+ "  Posee " + this.cantidadTorretas + " de torreta/s de defensa.";
 	}
 

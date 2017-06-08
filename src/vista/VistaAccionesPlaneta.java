@@ -27,14 +27,14 @@ public class VistaAccionesPlaneta extends JFrame implements ActionListener {
 	public VistaAccionesPlaneta(String nombreJugador, String nombrePlaneta){
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         this.setTitle("Jugador: "+ nombreJugador + " - Planeta: " + nombrePlaneta);
-    	this.setSize(400,450);
+    	this.setSize(500,500);
     	this.setLocation(0, 0);
     
     	GridLayout layout = new GridLayout(10,0);
     	this.getContentPane().setLayout(layout);
     	
     	JLabel label = new JLabel();
-    	label.setText("Jugador: " + nombreJugador + " ¿Qué accion toma sobre el planeta "+ nombrePlaneta +"?");
+    	label.setText("Jugador: " + nombreJugador + " ¿Qué acción desar tomar sobre el planeta "+ nombrePlaneta +"?");
     	this.add(label);
     	
     	botonTorretas = new JButton();
@@ -58,7 +58,7 @@ public class VistaAccionesPlaneta extends JFrame implements ActionListener {
     	this.add(botonNaveDeTransporte);
     	
     	botonAumentandoProduccion = new JButton();
-    	botonAumentandoProduccion.setText("Aumentar la produccion del planeta");
+    	botonAumentandoProduccion.setText("Aumentar la producción del planeta");
     	botonAumentandoProduccion.addActionListener(this);
     	this.add(botonAumentandoProduccion);
     	

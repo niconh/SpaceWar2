@@ -1,12 +1,6 @@
 package controlador;
 
-import java.io.IOException;
-
-import javax.swing.JFrame;
-
 import modelo.*;
-
-
 import vista.*;
 
 public class ControladorTurno {
