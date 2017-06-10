@@ -51,7 +51,7 @@ public class Congelado extends Planeta{
 		// TODO Auto-generated method stub
 		return " El planeta " + this.nombre + " esta en gran parte congelado"
 				+ " pero tiene una poblacion de " + this.poblacion + " habitantes.\n"
-				+ "  Posee " + this.cantidadTorretas + " de torreta/s de defensa.";
+				+ "  Posee " + this.cantidadTorretas + " de torretas de defensa.";
 		
 	}
 }

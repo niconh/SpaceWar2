@@ -52,7 +52,7 @@ public class Terrestre extends Planeta {
 
 		return " El planeta " + this.nombre
 				+ " tiene una población de " + this.poblacion + " habitantes.\n"
-				+ "  Posee " + this.cantidadTorretas + " de torreta/s de defensa.";
+				+ "  Posee " + this.cantidadTorretas + " de torretas de defensa.";
 	}
 
 }

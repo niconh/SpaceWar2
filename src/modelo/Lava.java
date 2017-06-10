@@ -51,7 +51,7 @@ public class Lava extends Planeta {
 		// TODO Auto-generated method stub
 		return " El planeta " + this.nombre + " esta cubierto de rios de lava pero tiene"
 				+ " una población de " + this.poblacion + " habitantes.\n"
-				+ "  Posee " + this.cantidadTorretas + " de torreta/s de defensa.";
+				+ "  Posee " + this.cantidadTorretas + " de torretas de defensa.";
 	}
 
 	
