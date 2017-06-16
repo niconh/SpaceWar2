@@ -4,6 +4,16 @@ import java.util.*;
 
 public class Universo extends ElementoDeJuego {
 	
+	private boolean juegoFinalizado;
+	
+	public boolean isJuegoFinalizado() {
+		return juegoFinalizado;
+	}
+	
+	public void setJuegoFinalizado(boolean juegoFinalizado) {
+		this.juegoFinalizado = juegoFinalizado;
+	}
+
 	private List<Jugador> jugadores = new ArrayList<Jugador>();
 	
 	public List<Jugador> getJugadores(){
@@ -32,6 +42,8 @@ public class Universo extends ElementoDeJuego {
 	}
 		
 	public Universo(){
+		
+		this.juegoFinalizado = false;
 		
 		Jugador player1 = new Jugador("Nico");
 		Jugador player2 = new Jugador("Nacho");

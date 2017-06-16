@@ -1,10 +1,16 @@
 package vista;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class VistaAccionesPlaneta extends JFrame implements ActionListener {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import modelo.Planeta;
+
+public class VistaAccionesPlaneta extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -14,149 +20,93 @@ public class VistaAccionesPlaneta extends JFrame implements ActionListener {
 					botonNaveBatalla,
 					botonNaveDestructor,
 					botonNaveDeTransporte,
-					botonAumentandoProduccion,
-					botonAvanzarTurno;
+					botonAumentandoProduccion;
 	
 	protected boolean produciendoTorretas,
 	 				  produciendoNaveDeBatalla,
 	 				  produciendoNaveDestructor,
 	 				  produciendoNaveDeTransporte,
-	 				  aumentandoLaProduccion,
-	 				  avanzarTurno;
+	 				  aumentandoLaProduccion;
 	
-	public VistaAccionesPlaneta(String nombreJugador, String nombrePlaneta){
-        this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        this.setTitle("Jugador: "+ nombreJugador + " - Planeta: " + nombrePlaneta);
-    	this.setSize(500,500);
-    	this.setLocation(0, 0);
+	Planeta planeta;
+	
+	public VistaAccionesPlaneta(Planeta planet, String nombreJugador){
+        this.setTitle("Planeta " + planet.getNombre() + " del jugador "+ nombreJugador);
+    	this.setSize(400,400);
+    	this.setLocation(810, 10);
     
     	GridLayout layout = new GridLayout(10,0);
     	this.getContentPane().setLayout(layout);
     	
+    	this.planeta = planet;
+    	
     	JLabel label = new JLabel();
-    	label.setText("Jugador: " + nombreJugador + " ¿Qué acción desar tomar sobre el planeta "+ nombrePlaneta +"?");
+    	label.setText(" " + nombreJugador + " ¿Qué acción desar tomar sobre el planeta "+ planet.getNombre() +"?");
     	this.add(label);
     	
     	botonTorretas = new JButton();
     	botonTorretas.setText("Producir Torretas");
-    	botonTorretas.addActionListener(this);
+    	botonTorretas.addActionListener(				
+				new ActionListener(){
+					public void actionPerformed(ActionEvent e){
+						accion.setText("Se van a producir Torretas");
+						planeta.producirTorretas();
+					}
+				}
+			);
     	this.add(botonTorretas);
     	
     	botonNaveBatalla = new JButton();
     	botonNaveBatalla.setText("Producir Nave de Batalla");
-    	botonNaveBatalla.addActionListener(this);
+    	botonNaveBatalla.addActionListener(
+				new ActionListener(){
+					public void actionPerformed(ActionEvent e){
+						accion.setText("Se van a producir Naves de Batalla");
+						planeta.producirNaveDeBatalla();
+					}
+				}
+			);
     	this.add(botonNaveBatalla);
     	
     	botonNaveDestructor = new JButton();
     	botonNaveDestructor.setText("Producir Nave Destructor");
-    	botonNaveDestructor.addActionListener(this);
+    	botonNaveDestructor.addActionListener(
+				new ActionListener(){
+					public void actionPerformed(ActionEvent e){
+						accion.setText("Se van a producir Naves Destructor");
+						planeta.producirNaveDestructor();
+					}
+				}
+			);
     	this.add(botonNaveDestructor);
     	
     	botonNaveDeTransporte = new JButton();
     	botonNaveDeTransporte.setText("Producir Nave de Transporte");
-    	botonNaveDeTransporte.addActionListener(this);
+    	botonNaveDeTransporte.addActionListener(
+				new ActionListener(){
+					public void actionPerformed(ActionEvent e){
+						accion.setText("Se van a producir Naves de Transporte");
+						planeta.producirNaveDeTransporte();
+					}
+				}
+			);
     	this.add(botonNaveDeTransporte);
     	
     	botonAumentandoProduccion = new JButton();
     	botonAumentandoProduccion.setText("Aumentar la producción del planeta");
-    	botonAumentandoProduccion.addActionListener(this);
+    	botonAumentandoProduccion.addActionListener(
+				new ActionListener(){
+					public void actionPerformed(ActionEvent e){
+						accion.setText("Se va a trabajar en aumentar la producción del planeta");
+						planeta.aumentarLaProduccion();
+					}
+				}
+			);
     	this.add(botonAumentandoProduccion);
-    	
     	
     	
     	accion = new JLabel();
     	this.add(accion);
-    	
-    	this.avanzarTurno=false;
-    	botonAvanzarTurno = new JButton();
-    	botonAvanzarTurno.setText("Avanzar Turno");
-    	botonAvanzarTurno.addActionListener(this);
-    	this.add(botonAvanzarTurno);
-    	
+       	
 	}
-	
-	public void actionPerformed(ActionEvent e){
-		
-	
-		if(e.getSource()==botonTorretas){
-			accion.setText("Se van a producir Torretas");
-			this.produciendoTorretas = true;
-			this.produciendoNaveDeBatalla = false;
-			this.produciendoNaveDestructor  = false;
-			this.produciendoNaveDeTransporte = false;
-			this.aumentandoLaProduccion = false;
-		}
-		
-		if(e.getSource()==botonNaveBatalla){
-			accion.setText("Se van a producir Naves de Batalla");
-			this.produciendoTorretas = false;
-			this.produciendoNaveDeBatalla = true;
-			this.produciendoNaveDestructor  = false;
-			this.produciendoNaveDeTransporte = false;
-			this.aumentandoLaProduccion = false;
-		}
-		
-		if(e.getSource()==botonNaveDestructor){
-			accion.setText("Se van a producir Naves Destructoras");
-			this.produciendoTorretas = false;
-			this.produciendoNaveDeBatalla = false;
-			this.produciendoNaveDestructor = true;
-			this.produciendoNaveDeTransporte = false;
-			this.aumentandoLaProduccion = false;
-		}
-		
-		if(e.getSource()==botonNaveDeTransporte){
-			accion.setText("Se van a producir Naves de Transporte");
-			this.produciendoTorretas = false;
-			this.produciendoNaveDeBatalla = false;
-			this.produciendoNaveDestructor  = false;
-			this.produciendoNaveDeTransporte = true;
-			this.aumentandoLaProduccion = false;
-		}
-		
-		if(e.getSource()==botonAumentandoProduccion){
-			accion.setText("Se va a trabajar en aumentar la producción del planeta");
-			this.produciendoTorretas = false;
-			this.produciendoNaveDeBatalla = false;
-			this.produciendoNaveDestructor  = false;
-			this.produciendoNaveDeTransporte = false;
-			this.aumentandoLaProduccion = true;
-		}
-		
-		
-		
-		
-		if(e.getSource()==botonAvanzarTurno){
-			this.avanzarTurno=true;
-		}
-		
-	}
-
-	public boolean isProduciendoTorretas() {
-		return produciendoTorretas;
-	}
-
-	public boolean isProduciendoNaveDeBatalla() {
-		return produciendoNaveDeBatalla;
-	}
-
-	public boolean isProduciendoNaveDestructor() {
-		return produciendoNaveDestructor;
-	}
-
-	public boolean isProduciendoNaveDeTransporte() {
-		return produciendoNaveDeTransporte;
-	}
-
-	public boolean isAumentandoLaProduccion() {
-		return aumentandoLaProduccion;
-	}
-
-	public boolean isAvanzarTurno() {
-		return avanzarTurno;
-	}
-	
-	
-	
-
 }
