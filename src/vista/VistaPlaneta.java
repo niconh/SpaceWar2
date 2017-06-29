@@ -20,8 +20,8 @@ public class VistaPlaneta extends JFrame {
 	public VistaPlaneta(List<Planeta> planetas, final String nombreJugador){
 		
 		this.setTitle("Planetas del jugador " +nombreJugador);
-		this.setSize(400,400);
-		this.setLocation(410, 10);
+		this.setSize(300,300);
+		this.setLocation(310, 0);
 		
 		GridLayout layout = new GridLayout(10,0);
 		this.getContentPane().setLayout(layout);

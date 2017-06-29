@@ -49,10 +49,14 @@ public class Transporte extends Nave {
 	public void setDirY(int dirY) {
 		this.dirY = dirY;
 	}
+	
+	public String getTipo(){
+		return "Transporte";
+	}
 
 	public String toString() {
 
-		return "  Soy una nave de transporte que transita el espacio en "
+		return "\n  Soy una nave de transporte que transita el espacio en "
 				+ this.posX + " " + this.posY + ".";
 	}
 

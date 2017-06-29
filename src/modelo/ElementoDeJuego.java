@@ -17,6 +17,7 @@ public abstract class ElementoDeJuego extends Observado {
 	
 	public void avanzarTurno(){
 		this.turnoActualElemento++;
+		this.actualizarObservadores();
 	}
 	
 

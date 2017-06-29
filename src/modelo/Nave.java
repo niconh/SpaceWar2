@@ -1,6 +1,6 @@
 package modelo;
 
-public class Nave extends ElementoDeJuego {
+public abstract class Nave extends ElementoDeJuego {
 	
 	protected int dirX;
 	protected int dirY;
@@ -15,6 +15,8 @@ public class Nave extends ElementoDeJuego {
 		this.dirX = dirX;
 		this.dirY = dirY;
 	}
+	
+	public abstract String getTipo();
 	
 	
 	

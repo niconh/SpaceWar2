@@ -19,6 +19,8 @@ public class VistaPrincipal extends JFrame {
 	private Universo universo;
 	private VistaUniverso vista;
 	private ControladorTurno controlador;
+	
+	private JFrame vistaUniversoSwing;
 
 	private JButton botonJugador, botonAvanzarTurno;
 	
@@ -27,14 +29,17 @@ public class VistaPrincipal extends JFrame {
 	public VistaPrincipal(){
 	
 		universo = new Universo();
-		vista = new VistaUniverso(universo);
+		//vista = new VistaUniverso(universo);
 		controlador = new ControladorTurno(50,universo);
-		universo.registrarObservador(vista);
+		//universo.registrarObservador(vista);
 		
+		vistaUniversoSwing = new VistaUniversoSwing(universo);
+		vistaUniversoSwing.setVisible(true);
+				
 		
 		this.setTitle("Space War");
-		this.setSize(400,400);
-		this.setLocation(10, 10);
+		this.setSize(300,300);
+		this.setLocation(10, 0);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
     	GridLayout layout = new GridLayout(10,0);

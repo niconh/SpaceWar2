@@ -48,9 +48,13 @@ public class Destructor extends Nave {
 		this.dirY = dirY;
 	}
 	
+	public String getTipo(){
+		return "Destructor";
+	}
+	
 	public String toString() {
 
-		return "  Soy una nave destructor que transita el espacio en "
+		return "\n  Soy una nave destructor que transita el espacio en "
 				+ this.posX + " " + this.posY + ".";
 	}
 

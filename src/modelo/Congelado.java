@@ -49,9 +49,9 @@ public class Congelado extends Planeta{
 
 	public String toString() {
 		// TODO Auto-generated method stub
-		return " El planeta " + this.nombre + " esta en gran parte congelado"
-				+ " pero tiene una poblacion de " + this.poblacion + " habitantes.\n"
-				+ "  Posee " + this.cantidadTorretas + " de torretas de defensa.";
+		return "\n El planeta " + this.nombre + " esta en gran parte congelado"
+				+ " y tiene una poblacion de " + this.poblacion + " habitantes.\n"
+				+ "  Posee " + this.cantidadTorretas + " de torretas de defensa";
 		
 	}
 }

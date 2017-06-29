@@ -27,11 +27,15 @@ public class Batalla extends Nave {
 	public int getPosY() {
 		return posY;
 	}
+	
+	public String getTipo(){
+		return "Batalla";
+	}
 
 	
 	public String toString() {
 
-		return "  Soy una nave de batalla que transita el espacio en "
+		return "\n  Soy una nave de batalla que transita el espacio en "
 				+ this.posX + " " + this.posY + ".";
 	}
 

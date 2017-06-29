@@ -2,7 +2,7 @@ package observer;
 
 import java.util.*;
 
-public abstract class Observado {
+public class Observado {
 	
 	private List<IObservador> observadores = new ArrayList<IObservador>();
 	

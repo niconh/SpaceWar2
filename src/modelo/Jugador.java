@@ -46,7 +46,7 @@ public class Jugador extends Observado {
 	
 	public String toString() {
 
-		return "\nEl jugador " + this.getNombre() + " es dueño de:";
+		return "\n\nEl jugador " + this.getNombre() + " es dueño de:";
 	}
 	
 }

@@ -32,8 +32,8 @@ public class VistaAccionesPlaneta extends JFrame {
 	
 	public VistaAccionesPlaneta(Planeta planet, String nombreJugador){
         this.setTitle("Planeta " + planet.getNombre() + " del jugador "+ nombreJugador);
-    	this.setSize(400,400);
-    	this.setLocation(810, 10);
+    	this.setSize(400,300);
+    	this.setLocation(610, 0);
     
     	GridLayout layout = new GridLayout(10,0);
     	this.getContentPane().setLayout(layout);
