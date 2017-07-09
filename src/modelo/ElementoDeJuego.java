@@ -6,8 +6,7 @@ public abstract class ElementoDeJuego extends Observado {
 	
 	protected int poblacion;
 	protected String nombre;
-	protected int posX = 0;
-	protected int posY = 0;
+	protected Punto ubicacion;
 	
 	protected int puntosDeVida;
 

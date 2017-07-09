@@ -2,47 +2,30 @@ package modelo;
 
 public class Batalla extends Nave {
 
-
 	private int potenciaDeAtaque;
 		
-	public Batalla(int posX, int posY) {
+	public Batalla(double posX, double posY) {
 		super();
-		this.posX = posX;
-		this.posY = posY;
+		this.ubicacion = new Punto(posX,posY);
 		this.potenciaDeAtaque = 3;
 	}
 
 	public void avanzarTurno() {
 		super.avanzarTurno();
-		this.posX = this.posX + this.dirX;
-		this.posY = this.posY + this.dirY;
-	}
-	
-	
-	
-	public int getPosX() {
-		return posX;
-	}
-
-	public int getPosY() {
-		return posY;
 	}
 	
 	public String getTipo(){
 		return "Batalla";
 	}
-
 	
 	public String toString() {
 
 		return "\n  Soy una nave de batalla que transita el espacio en "
-				+ this.posX + " " + this.posY + ".";
+				+ this.ubicacion.toString();
 	}
 
 	public int getPotenciaDeAtaque() {
 		return potenciaDeAtaque;
 	}
- 
-
 }
 

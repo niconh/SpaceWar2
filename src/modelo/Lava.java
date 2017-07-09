@@ -23,19 +23,19 @@ public class Lava extends Planeta {
 		
 		if(this.produciendoNaveDeBatalla){
 			if(this.turnoActualElemento % (this.cantidadDeTurnosParaProducir) == 0){
-				this.naves.add(new Batalla(this.posX,this.posY));
+				this.naves.add(new Batalla(this.ubicacion.getX(),this.ubicacion.getY()));
 			}	
 		}
 		
 		if(this.produciendoNaveDestructor){
 			if(this.turnoActualElemento % (this.cantidadDeTurnosParaProducir) == 0){
-				this.naves.add(new Destructor(this.posX,this.posY));
+				this.naves.add(new Destructor(this.ubicacion.getX(),this.ubicacion.getY()));
 			}
 		}
 		
 		if(this.produciendoNaveDeTransporte){
 			if(this.turnoActualElemento % (this.cantidadDeTurnosParaProducir) == 0){
-				this.naves.add(new Transporte(this.posX,this.posY));
+				this.naves.add(new Transporte(this.ubicacion.getX(),this.ubicacion.getY()));
 			}
 		}
 		
