@@ -30,10 +30,10 @@ public class VistaAccionesNave extends JFrame implements ActionListener,IObserva
 	
 	public VistaAccionesNave(Nave nave, String nombreJugador){
         this.setTitle("Nave " + nave.getTipo() + " del jugador "+ nombreJugador);
-    	this.setSize(600,300);
+    	this.setSize(400,300);
     	this.setLocation(1310, 0);
     
-    	GridLayout layout = new GridLayout(10,0);
+    	GridLayout layout = new GridLayout(6,6);
     	this.getContentPane().setLayout(layout);
     	
     	    	

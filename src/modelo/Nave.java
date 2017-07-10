@@ -21,8 +21,8 @@ public abstract class Nave extends ElementoDeJuego {
 		
 			double norma = Math.sqrt( Math.pow(vdx, 2) + Math.pow(vdy, 2) ) ;
 		
-			double vux = (vdx / norma)*2;
-			double vuy = (vdy / norma)*2;
+			double vux = (vdx / norma)*3;
+			double vuy = (vdy / norma)*3;
 		
 			this.ubicacion.setX(this.ubicacion.getX()+vux);
 			this.ubicacion.setY(this.ubicacion.getY()+vuy);

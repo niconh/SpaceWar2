@@ -8,6 +8,7 @@ public class Destructor extends Nave {
 	public Destructor(double posX, double posY) {
 		super();
 		this.ubicacion = new Punto(posX,posY);
+		this.destino = new Punto(posX,posY);
 		this.potenciaDeAtaque = 10;
 	}
 

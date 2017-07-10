@@ -8,6 +8,7 @@ public class Transporte extends Nave {
 	public Transporte(double posX, double posY) {
 		super();
 		this.ubicacion = new Punto(posX,posY);
+		this.destino = new Punto(posX,posY);
 		this.capacidadMaxDePersonas = 100;
 	}
 
@@ -18,7 +19,7 @@ public class Transporte extends Nave {
 	
 
 	public String getTipo(){
-		return "de Transporte";
+		return "Transporte";
 	}
 
 	public String toString() {
