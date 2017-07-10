@@ -5,7 +5,7 @@ public class Terrestre extends Planeta {
 	private int poblacion_maxima = 9999999;
 	 
 	public Terrestre(String nombre) {
-		super(nombre,1,2,2);
+		super(nombre,1,3,3);
 	}
 
 	public void avanzarTurno(){

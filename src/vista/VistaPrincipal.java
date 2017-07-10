@@ -30,7 +30,7 @@ public class VistaPrincipal extends JFrame {
 	
 		universo = new Universo();
 		//vista = new VistaUniverso(universo);
-		controlador = new ControladorTurno(50,universo);
+		controlador = new ControladorTurno(500,universo);
 		//universo.registrarObservador(vista);
 		
 		vistaUniversoSwing = new VistaUniversoSwing(universo);

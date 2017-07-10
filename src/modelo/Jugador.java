@@ -24,7 +24,7 @@ public class Jugador extends Observado {
 	public void avanzarTurno(){
 		for(Planeta p : this.planetas){
 			p.avanzarTurno();
-			for(ElementoDeJuego n: p.getNaves()){
+			for(Nave n: p.getNaves()){
 				n.avanzarTurno();
 			}
 		}

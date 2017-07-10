@@ -18,7 +18,7 @@ public class Transporte extends Nave {
 	
 
 	public String getTipo(){
-		return "Transporte";
+		return "de Transporte";
 	}
 
 	public String toString() {

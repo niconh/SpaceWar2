@@ -47,7 +47,7 @@ public abstract class Planeta extends ElementoDeJuego {
 		return nombre;
 	}
 
-	public Planeta(String nombre, int cantidadDeTurnosParaProducir, int posY, int posX) {
+	public Planeta(String nombre, int cantidadDeTurnosParaProducir, double posY, double posX) {
 		super();
 		this.ubicacion = new Punto(posX,posY);
 		this.poblacion = 2;

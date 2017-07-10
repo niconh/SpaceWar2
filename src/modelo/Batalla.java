@@ -7,6 +7,7 @@ public class Batalla extends Nave {
 	public Batalla(double posX, double posY) {
 		super();
 		this.ubicacion = new Punto(posX,posY);
+		this.destino = new Punto(posX,posY);
 		this.potenciaDeAtaque = 3;
 	}
 

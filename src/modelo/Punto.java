@@ -1,5 +1,7 @@
 package modelo;
 
+import java.text.DecimalFormat;
+
 public class Punto {
 	
 	private double x;
@@ -21,10 +23,21 @@ public class Punto {
 	public double getY() {
 		return y;
 	}
+	
+	
+
+	public void setX(double x) {
+		this.x = x;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}
 
 	@Override
 	public String toString() {
-		return "(" + this.x + ", " + this.y + ")";
+		DecimalFormat df = new DecimalFormat("#.00");
+		return "(" + df.format(this.x) + ", " + df.format(this.y) + ")";
 	}
 
 }

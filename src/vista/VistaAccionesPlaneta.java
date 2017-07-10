@@ -20,7 +20,8 @@ public class VistaAccionesPlaneta extends JFrame {
 					botonNaveBatalla,
 					botonNaveDestructor,
 					botonNaveDeTransporte,
-					botonAumentandoProduccion;
+					botonAumentandoProduccion,
+					botonVerNaves;
 	
 	protected boolean produciendoTorretas,
 	 				  produciendoNaveDeBatalla,
@@ -29,6 +30,7 @@ public class VistaAccionesPlaneta extends JFrame {
 	 				  aumentandoLaProduccion;
 	
 	Planeta planeta;
+	String nombreJug;
 	
 	public VistaAccionesPlaneta(Planeta planet, String nombreJugador){
         this.setTitle("Planeta " + planet.getNombre() + " del jugador "+ nombreJugador);
@@ -39,6 +41,7 @@ public class VistaAccionesPlaneta extends JFrame {
     	this.getContentPane().setLayout(layout);
     	
     	this.planeta = planet;
+    	this.nombreJug = nombreJugador;
     	
     	JLabel label = new JLabel();
     	label.setText(" " + nombreJugador + " ¿Qué acción desar tomar sobre el planeta "+ planet.getNombre() +"?");
@@ -104,6 +107,17 @@ public class VistaAccionesPlaneta extends JFrame {
 			);
     	this.add(botonAumentandoProduccion);
     	
+    	botonVerNaves = new JButton();
+    	botonVerNaves.setText("Ver naves");
+    	botonVerNaves.addActionListener(
+				new ActionListener(){
+					public void actionPerformed(ActionEvent e){
+						JFrame f = new VistaNaves(planeta.getNaves(),nombreJug);
+						f.setVisible(true);
+					}
+				}
+			);
+    	this.add(botonVerNaves);
     	
     	accion = new JLabel();
     	this.add(accion);
