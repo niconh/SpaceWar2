@@ -21,6 +21,17 @@ public abstract class Planeta extends ElementoDeJuego {
 		naves.add(nave);
 	}
 	
+	public void eliminarNavesQueExplotaron(){
+		int i=0;
+		if(!naves.isEmpty()){
+			for(Nave n: this.naves){
+				if(n.exploto)
+					naves.remove(i);
+				i++;
+			}
+		}
+	}
+	
 	public List<Nave> getNaves(){
 		return this.naves;
 	}

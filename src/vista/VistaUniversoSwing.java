@@ -46,11 +46,11 @@ public class VistaUniversoSwing extends JFrame implements IObservador {
 				int destructor=0;
 				int transporte=0;
 				for(Nave n: p.getNaves()){
-					if(n.getTipo().equals("Batalla"))
+					if(n.getTipo().equals("Batalla") && !n.isExploto())
 						batalla++;
-					if(n.getTipo().equals("Destructor"))
+					if(n.getTipo().equals("Destructor") && !n.isExploto())
 						destructor++;
-					if(n.getTipo().equals("Transporte"))
+					if(n.getTipo().equals("Transporte") && !n.isExploto())
 						transporte++;						
 				}	
 				String naves = new String(", " + batalla + " naves de batalla, " + 
@@ -81,11 +81,11 @@ public class VistaUniversoSwing extends JFrame implements IObservador {
 				int destructor=0;
 				int transporte=0;
 				for(Nave n: p.getNaves()){
-					if(n.getTipo().equals("Batalla"))
+					if(n.getTipo().equals("Batalla") && !n.isExploto())
 						batalla++;
-					if(n.getTipo().equals("Destructor"))
+					if(n.getTipo().equals("Destructor") && !n.isExploto())
 						destructor++;
-					if(n.getTipo().equals("Transporte"))
+					if(n.getTipo().equals("Transporte") && !n.isExploto())
 						transporte++;						
 				}	
 				String naves = new String(", " + batalla + " naves de batalla, " + 

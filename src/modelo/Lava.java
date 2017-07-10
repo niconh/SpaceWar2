@@ -5,7 +5,7 @@ public class Lava extends Planeta {
 	private int poblacion_maxima = 99999;
 	
 	public Lava(String nombre) {
-		super(nombre,2,4,4);
+		super(nombre,2,20,20);
 	}
 
 	public void avanzarTurno(){

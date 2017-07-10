@@ -32,4 +32,10 @@ public class Transporte extends Nave {
 		return capacidadMaxDePersonas;
 	}
 
+	@Override
+	public int getPotenciaDeAtaque() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

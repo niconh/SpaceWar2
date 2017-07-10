@@ -10,14 +10,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import modelo.Planeta;
+import modelo.Universo;
 
 public class VistaPlaneta extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
 	JButton botonPlaneta;
+	Universo universo;
 	
-	public VistaPlaneta(List<Planeta> planetas, final String nombreJugador){
+	public VistaPlaneta(List<Planeta> planetas, final String nombreJugador, final Universo universo){
+		
+		this.universo = universo;
 		
 		this.setTitle("Planetas del jugador " +nombreJugador);
 		this.setSize(300,300);
@@ -36,7 +40,7 @@ public class VistaPlaneta extends JFrame {
 			botonPlaneta.addActionListener(				
 					new ActionListener(){
 						public void actionPerformed(ActionEvent e){
-							JFrame f = new VistaAccionesPlaneta(p,nombreJugador);
+							JFrame f = new VistaAccionesPlaneta(p,nombreJugador,universo);
 							f.setVisible(true);
 						}
 					}

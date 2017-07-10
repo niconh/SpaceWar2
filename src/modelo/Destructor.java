@@ -3,13 +3,12 @@ package modelo;
 public class Destructor extends Nave {
 	
 	
-	private int potenciaDeAtaque;
-		
 	public Destructor(double posX, double posY) {
 		super();
 		this.ubicacion = new Punto(posX,posY);
 		this.destino = new Punto(posX,posY);
-		this.potenciaDeAtaque = 10;
+		this.potenciaDeAtaque = 8;
+		this.puntosDeVida = 20;
 	}
 
 	public void avanzarTurno() {
@@ -25,10 +24,6 @@ public class Destructor extends Nave {
 
 		return "\n  Soy una nave destructor que transita el espacio en "
 				+ this.ubicacion.toString();
-	}
-
-	public int getPotenciaDeAtaque() {
-		return potenciaDeAtaque;
 	}
 
 }

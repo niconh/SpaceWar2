@@ -17,7 +17,7 @@ public class VistaPrincipal extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	private Universo universo;
-	private VistaUniverso vista;
+	//private VistaUniverso vista;
 	private ControladorTurno controlador;
 	
 	private JFrame vistaUniversoSwing;
@@ -56,7 +56,7 @@ public class VistaPrincipal extends JFrame {
 			botonJugador.addActionListener(				
 					new ActionListener(){
 						public void actionPerformed(ActionEvent e){
-							JFrame f = new VistaPlaneta(j.getPlanetas(), j.getNombre());
+							JFrame f = new VistaPlaneta(j.getPlanetas(), j.getNombre(), universo);
 							f.setVisible(true);
 						}
 					}

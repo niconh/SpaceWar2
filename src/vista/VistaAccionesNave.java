@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 
 import modelo.Nave;
 import modelo.Punto;
+import modelo.Universo;
 import observer.IObservador;
 
 public class VistaAccionesNave extends JFrame implements ActionListener,IObservador {
@@ -26,27 +27,29 @@ public class VistaAccionesNave extends JFrame implements ActionListener,IObserva
 					botonAtacar;
 	
 	
-	Nave nav;
+	Nave nave;
 	
-	public VistaAccionesNave(Nave nave, String nombreJugador){
+	Universo universo;
+	
+	public VistaAccionesNave(final Nave nave, final String nombreJugador, final Universo universo){
         this.setTitle("Nave " + nave.getTipo() + " del jugador "+ nombreJugador);
-    	this.setSize(400,300);
-    	this.setLocation(1310, 0);
+    	this.setSize(500,300);
+    	this.setLocation(610, 300);
     
     	GridLayout layout = new GridLayout(6,6);
     	this.getContentPane().setLayout(layout);
     	
-    	    	
-    	this.nav = nave;
+    	this.universo = universo;    	
+    	this.nave = nave;
     	
-    	nav.registrarObservador(this);
+    	nave.registrarObservador(this);
     	
     	JLabel label = new JLabel();
-    	label.setText(" " + nombreJugador + " ¿Qué acción desar tomar sobre la nave de " + nav.getTipo() +"?");
+    	label.setText(" " + nombreJugador + " ¿Qué acción desea tomar sobre la nave de " + nave.getTipo() +"?");
     	this.add(label);
     	
     	labelNave = new JLabel();
-    	labelNave.setText(nav.toString());
+    	labelNave.setText(nave.toString());
     	this.add(labelNave);
     	
     	botonMoverse = new JButton();
@@ -69,7 +72,8 @@ public class VistaAccionesNave extends JFrame implements ActionListener,IObserva
     	botonAtacar.addActionListener(
 				new ActionListener(){
 					public void actionPerformed(ActionEvent e){
-						
+						JFrame f = new VistaNavesParaAtacar(universo,nave,nombreJugador);
+						f.setVisible(true);
 					}
 				}
 			);
@@ -81,7 +85,7 @@ public class VistaAccionesNave extends JFrame implements ActionListener,IObserva
 		try{
 			int x = Integer.parseInt(textboxX.getText());
 			int y = Integer.parseInt(textboxY.getText());
-			nav.setDestino(new Punto( x , y ));
+			nave.setDestino(new Punto( x , y ));
 		}
 		catch(Exception ex){
 			JOptionPane.showMessageDialog(this, "Revisar coordenadas");
@@ -90,7 +94,11 @@ public class VistaAccionesNave extends JFrame implements ActionListener,IObserva
 	}
 
 	public void Actualizar() {
-		labelNave.setText(nav.toString());
+		if(nave.isExploto())
+			this.dispose();
+		else{
+			labelNave.setText(nave.toString());
+		}
 		
 	}
 

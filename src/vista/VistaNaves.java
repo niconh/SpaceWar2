@@ -10,13 +10,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import modelo.Nave;
-import modelo.Planeta;
+import modelo.Universo;
 
 public class VistaNaves extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	
-	public VistaNaves(List<Nave> naves, final String nombreJugador){
+	Universo universo;
+	
+	public VistaNaves(List<Nave> naves, final String nombreJugador, final Universo universo){
+		
+		this.universo = universo;
 		
 		JButton botonNave;
 		
@@ -32,18 +36,20 @@ public class VistaNaves extends JFrame {
     	this.add(label);
 		
 		for(final Nave n: naves){
-			botonNave = new JButton();
-			botonNave.setText("Nave " + n.getTipo());
-			botonNave.addActionListener(				
-					new ActionListener(){
-						public void actionPerformed(ActionEvent e){
-							JFrame f = new VistaAccionesNave(n,nombreJugador);
-							f.setVisible(true);
+			if(!n.isExploto()){
+				botonNave = new JButton();
+				botonNave.setText("Nave " + n.getTipo());
+				botonNave.addActionListener(				
+						new ActionListener(){
+							public void actionPerformed(ActionEvent e){
+								JFrame f = new VistaAccionesNave(n,nombreJugador,universo);
+								f.setVisible(true);
+							}
 						}
-					}
-				);
-			
-	    	this.add(botonNave);
+					);
+				
+		    	this.add(botonNave);
+			}
 		}
 		
 		
