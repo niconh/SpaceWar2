@@ -53,7 +53,6 @@ public class VistaNavesParaAtacar extends JFrame {
 					this.add(labelPlaneta);
 					
 					for(final Nave n: p.getNaves()){
-						
 						if(!n.isExploto()){
 							botonNave = new JButton();
 							botonNave.setText("Nave " + n.getTipo());
