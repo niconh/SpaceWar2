@@ -10,6 +10,7 @@ public class Transporte extends Nave {
 		this.ubicacion = new Punto(posX,posY);
 		this.destino = new Punto(posX,posY);
 		this.capacidadMaxDePersonas = 100;
+		this.puntosDeVida = 30;
 	}
 
 	public void avanzarTurno() {
@@ -25,7 +26,7 @@ public class Transporte extends Nave {
 	public String toString() {
 
 		return "\n  Soy una nave de transporte que transita el espacio en "
-				+ this.ubicacion.toString();
+				+ this.ubicacion.toString() + " con " + this.getPuntosDeVida() + " puntos de vida.";
 	}
 
 	public int getCapacidadMaxDePersonas() {

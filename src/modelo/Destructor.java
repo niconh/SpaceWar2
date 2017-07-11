@@ -23,7 +23,7 @@ public class Destructor extends Nave {
 	public String toString() {
 
 		return "\n  Soy una nave destructor que transita el espacio en "
-				+ this.ubicacion.toString();
+				+ this.ubicacion.toString() + " con " + this.getPuntosDeVida() + " puntos de vida.";
 	}
 
 }

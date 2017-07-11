@@ -49,7 +49,7 @@ public abstract class Nave extends ElementoDeJuego {
 		}
 		
 		for(Nave n: this.navesQueMeAtacan){ 
-			if(n.ubicacion.getX() == this.ubicacion.getX() && n.ubicacion.getY() == this.ubicacion.getY() ){
+			if(n.ubicacion.getX() == this.ubicacion.getX() && n.ubicacion.getY() == this.ubicacion.getY() && !n.isExploto()){
 				if(this.puntosDeVida - n.getPotenciaDeAtaque() > 0){
 					this.puntosDeVida = this.puntosDeVida - n.getPotenciaDeAtaque();
 				}
